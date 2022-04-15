@@ -1,0 +1,6 @@
+  bed: |-
+    <b><gradient:#92fb15:#b5fd92>Сервер</gradient></b> <color:#2e2e2e>|</color> Координаты последней кровати
+    <click:suggest_command:'<pworld> X:<pos-x> Y:<pos-y> Z:<pos-z>'><hover:show_text:'Нажми для копирования'>Мир <world> X:<pos-x> Y:<pos-y> Z:<pos-z></hover> <color:#ffe570>[Клик]</color></click>
+  dead: |-
+    <b><gradient:#92fb15:#b5fd92>Сервер</gradient></b> <color:#2e2e2e>|</color> Координаты последней смерти
+    <click:suggest_command:'<pworld> X:<pos-x> Y:<pos-y> Z:<pos-z>'><hover:show_text:'Нажми для копирования'>Мир <world> X:<pos-x> Y:<pos-y> Z:<pos-z></hover> <color:#ffe570>[Клик]</color></click>
