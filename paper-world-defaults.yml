@@ -15,7 +15,7 @@
 _version: 30
 anticheat:
   anti-xray:
-    enabled: true
+    enabled: false
     engine-mode: 1
     hidden-blocks:
     - copper_ore
@@ -39,18 +39,14 @@ anticheat:
     - emerald_ore
     - deepslate_emerald_ore
     - ender_chest
-    - nether_quartz_ore
-    - ancient_debris
-    - nether_gold_ore
-    lava-obscures: true
+    lava-obscures: false
     max-block-height: 64
     replacement-blocks:
     - stone
-    - netherrack
-    - basalt
+    - oak_planks
     - deepslate
     update-radius: 2
-    use-permission: true
+    use-permission: false
   obfuscation:
     items:
       hide-durability: false
@@ -58,7 +54,7 @@ anticheat:
       hide-itemmeta-with-visual-effects: false
 chunks:
   auto-save-interval: default
-  delay-chunk-unloads-by: 7s
+  delay-chunk-unloads-by: 10s
   entity-per-chunk-save-limit:
     arrow: -1
     ender_pearl: -1
@@ -67,12 +63,12 @@ chunks:
     small_fireball: -1
     snowball: -1
   fixed-chunk-inhabited-time: -1
-  max-auto-save-chunks-per-tick: 8
+  max-auto-save-chunks-per-tick: 24
   prevent-moving-into-unloaded-chunks: false
 collisions:
   allow-player-cramming-damage: false
   allow-vehicle-collisions: true
-  fix-climbing-bypassing-cramming-rule: true
+  fix-climbing-bypassing-cramming-rule: false
   max-entity-collisions: 8
   only-players-collide: false
 entities:
@@ -103,7 +99,7 @@ entities:
       skeletons: false
       zombies: false
     nerf-pigmen-from-nether-portals: false
-    parrots-are-unaffected-by-player-movement: true
+    parrots-are-unaffected-by-player-movement: false
     phantoms-do-not-spawn-on-creative-players: true
     phantoms-only-attack-insomniacs: true
     phantoms-spawn-attempt-max-seconds: 119
@@ -135,61 +131,33 @@ entities:
     alt-item-despawn-rate:
       enabled: false
       items:
-        acacia_leaves: 300
-        andesite: 300
-        bamboo: 300
-        birch_leaves: 300
-        cactus: 300
         cobblestone: 300
-        dark_oak_leaves: 300
-        diorite: 300
-        dirt: 300
-        ender_pearl: 120
-        golden_sword: 300
-        granite: 300
-        grass: 300
-        gravel: 300
-        jungle_leaves: 300
-        kelp: 300
-        mangrove_leaves: 300
-        melon_slice: 300
-        netherrack: 300
-        oak_leaves: 300
-        pumpkin: 300
-        red_sand: 300
-        sand: 300
-        scaffolding: 600
-        spruce_leaves: 300
-        stone_sword: 300
-        sugar_cane: 300
-        twisting_vines: 300
-        weeping_vines: 300
     count-all-mobs-for-spawning: false
-    creative-arrow-despawn-rate: '30'
+    creative-arrow-despawn-rate: default
     despawn-ranges:
       ambient:
-        hard: 96
+        hard: 128
         soft: 32
       axolotls:
-        hard: 96
+        hard: 128
         soft: 32
       creature:
-        hard: 96
+        hard: 128
         soft: 32
       misc:
-        hard: 96
+        hard: 128
         soft: 32
       monster:
-        hard: 96
+        hard: 128
         soft: 32
       underground_water_creature:
-        hard: 96
+        hard: 128
         soft: 32
       water_ambient:
-        hard: 96
+        hard: 64
         soft: 32
       water_creature:
-        hard: 96
+        hard: 128
         soft: 32
     disable-mob-spawner-spawn-egg-transformation: false
     duplicate-uuid:
@@ -204,10 +172,10 @@ entities:
     - SleepingZ
     iron-golems-can-spawn-in-air: false
     monster-spawn-max-light-level: -1
-    non-player-arrow-despawn-rate: '120'
+    non-player-arrow-despawn-rate: default
     per-player-mob-spawns: true
     scan-for-legacy-ender-dragon: true
-    skeleton-horse-thunder-spawn-chance: 0.01
+    skeleton-horse-thunder-spawn-chance: default
     slime-spawn-height:
       slime-chunk:
         maximum: 40.0
@@ -244,18 +212,18 @@ environment:
     enabled: true
   generate-flat-bedrock: false
   nether-ceiling-void-damage-height: disabled
-  optimize-explosions: true
+  optimize-explosions: false
   portal-create-radius: 16
   portal-search-radius: 128
   portal-search-vanilla-dimension-scaling: true
   treasure-maps:
     enabled: true
     find-already-discovered:
-      loot-tables: 'false'
+      loot-tables: default
       villager-trade: false
   water-over-lava-flow-speed: 5
 feature-seeds:
-  generate-random-seeds-for-all: true
+  generate-random-seeds-for-all: false
 fishing-time-range:
   maximum: 600
   minimum: 100
@@ -264,15 +232,13 @@ fixes:
   falling-block-height-nerf: disabled
   fix-curing-zombie-villager-discount-exploit: true
   fix-items-merging-through-walls: false
-  fix-wither-targeting-bug: false
   prevent-tnt-from-moving-in-water: false
-  remove-corrupt-tile-entities: false
   split-overstacked-loot: true
   tnt-entity-height-nerf: disabled
 hopper:
   cooldown-when-full: true
   disable-move-event: false
-  ignore-occluding-blocks: true
+  ignore-occluding-blocks: false
 lootables:
   auto-replenish: false
   max-refills: -1
@@ -281,8 +247,8 @@ lootables:
   reset-seed-on-fill: true
   restrict-player-reloot: true
 maps:
-  item-frame-cursor-limit: 32
-  item-frame-cursor-update-interval: 20
+  item-frame-cursor-limit: 128
+  item-frame-cursor-update-interval: 10
 max-growth-height:
   bamboo:
     max: 16
@@ -295,26 +261,23 @@ misc:
   disable-sprint-interruption-on-attack: false
   light-queue-size: 20
   max-leash-distance: 10.0
-  redstone-implementation: EIGENCRAFT
+  redstone-implementation: VANILLA
   shield-blocking-delay: 5
   show-sign-click-command-failure-msgs-to-player: false
   update-pathfinding-on-block-update: true
-redstone:
-  algo: vanilla
-redstone-algo: eigencraft
 scoreboards:
   allow-non-player-entities-on-scoreboards: false
   use-vanilla-world-scoreboard-name-coloring: false
 spawn:
   allow-using-signs-inside-spawn-protection: false
-  keep-spawn-loaded: false
-  keep-spawn-loaded-range: 2
+  keep-spawn-loaded: true
+  keep-spawn-loaded-range: 48
 tick-rates:
   behavior:
     villager:
       validatenearbypoi: -1
   container-update: 1
-  grass-spread: 6
+  grass-spread: 1
   mob-spawner: 1
   sensor:
     villager:

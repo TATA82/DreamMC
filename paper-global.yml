@@ -112,9 +112,6 @@ timings:
   enabled: false
   hidden-config-entries:
   - database
-  - settings.bungeecord-addresses
-  - settings.velocity-support.secret
-  - web-services.token
   - proxies.velocity.secret
   history-interval: 300
   history-length: 3600
@@ -126,8 +123,8 @@ timings:
 unsupported-settings:
   allow-grindstone-overstacking: false
   allow-headless-pistons: false
-  allow-permanent-block-break-exploits: true
-  allow-piston-duplication: true
+  allow-permanent-block-break-exploits: false
+  allow-piston-duplication: false
   perform-username-validation: true
 watchdog:
   early-warning-delay: 10000
